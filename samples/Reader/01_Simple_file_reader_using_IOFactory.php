@@ -4,8 +4,13 @@ use PhpOffice\PhpSpreadsheet\IOFactory;
 
 require __DIR__ . '/../Header.php';
 
-$inputFileName = __DIR__ . '/sampleData/example1.xls';
-$helper->log('Loading file ' . /** @scrutinizer ignore-type */ pathinfo($inputFileName, PATHINFO_BASENAME) . ' using IOFactory to identify the format');
+$inputFileName = __DIR__ . '/sampleData/example2.xls';
+$helper->log(
+    'Loading file ' .
+        /** @scrutinizer ignore-type */
+        pathinfo($inputFileName, PATHINFO_BASENAME) .
+        ' using IOFactory to identify the format'
+);
 $spreadsheet = IOFactory::load($inputFileName);
 
 $sheetData = $spreadsheet->getActiveSheet()->toArray(null, true, true, true);
