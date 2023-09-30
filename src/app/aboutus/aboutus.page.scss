@@ -1,0 +1,30 @@
+ion-toolbar {
+  --background: var(--ion-color-warning-shade);
+
+  ion-label {
+    color: #000000;
+    margin-inline: 5px;
+  }
+
+  ion-icon {
+    padding: 0;
+  }
+
+  ion-segment-button {
+    --background-checked: var(--ion-color-warning);
+    --indicator-height: 4px;
+  }
+}
+
+ion-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    background-color: whitesmoke;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    height: 48px;
+    width: 48px;
+  }
+}

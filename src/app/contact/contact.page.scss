@@ -1,0 +1,13 @@
+.content {
+  height: 85%;
+  align-content: center;
+  justify-content: center;
+  margin-top: 70px;
+}
+
+ion-card-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 3 0 auto;
+}

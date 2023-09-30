@@ -1,0 +1,16 @@
+.content {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  margin-top: 64px;
+}
+
+ion-item {
+  --border-color: var(--ion-color-warning-shade);
+  --highlight-color-focused: var(--ion-color-warning);
+}
+
+ion-datetime {
+  border-radius: 16px;
+}

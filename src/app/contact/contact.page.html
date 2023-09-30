@@ -1,0 +1,52 @@
+<ion-content>
+  <div class="content">
+    <ion-refresher slot="fixed" (ionRefresh)="handleRefresh($event)">
+      <ion-refresher-content></ion-refresher-content>
+    </ion-refresher>
+
+    <div *ngIf="hoursList.length > 0; else noList">
+      <ion-card *ngFor="let record of hoursList">
+        <ion-card-header>
+          <ion-card-title>
+            <div>{{ record.ConstructionPlace }}</div>
+            <div>
+              <ion-button
+                (click)="deleteRecord(record.ID)"
+                color="warning"
+                fill="clear"
+              >
+                <ion-icon
+                  color="danger"
+                  fill="clear"
+                  name="trash"
+                  size="normal"
+                ></ion-icon>
+              </ion-button>
+            </div>
+          </ion-card-title>
+
+          <ion-card-subtitle
+            >{{ record.RecordDate | date: 'dd/MM/yyyy' }}</ion-card-subtitle
+          >
+        </ion-card-header>
+
+        <ion-card-content>
+          <p>Horas normais: <b>{{ record.LaborNormalHours | number }}</b></p>
+          <p>
+            Horas extraordinárias: <b>{{ record.LaborExtraHours | number }}</b>
+          </p>
+        </ion-card-content>
+      </ion-card>
+    </div>
+
+    <ng-template #noList>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title style="justify-content: center">
+            <div>Nenhum registo encontrado!</div>
+          </ion-card-title>
+        </ion-card-header>
+      </ion-card>
+    </ng-template>
+  </div>
+</ion-content>

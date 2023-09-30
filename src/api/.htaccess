@@ -1,0 +1,5 @@
+# Turn on the rewrite engine to enable URL rewriting
+# Rewrite all requests to index.php to handle routing
+
+RewriteEngine On
+RewriteRule . index.php

@@ -1,0 +1,52 @@
+<ion-content>
+  <div class="flex-center">
+    <form [formGroup]="form">
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>
+            <img src="../../assets/Logo.png" alt="Logo" height="40" />
+          </ion-card-title>
+        </ion-card-header>
+
+        <ion-card-content>
+          <ion-item>
+            <ion-label position="floating">Utilizador</ion-label>
+            <ion-input
+              type="text"
+              placeholder="Introduza o utilizador"
+              formControlName="user"
+            ></ion-input>
+            <ion-note
+              slot="error"
+              color="danger"
+              *ngIf="form.get('user')?.touched && form.get('user')!.errors?.['required']"
+              message="Introduza o utilizador"
+            ></ion-note>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="floating">Password</ion-label>
+            <ion-input
+              type="password"
+              placeholder="Introduza a password"
+              formControlName="password"
+            ></ion-input>
+            <ion-note
+              slot="error"
+              color="danger"
+              *ngIf="form.get('password')?.touched && form.get('password')?.errors?.['required']"
+              message="Introduza a password"
+            ></ion-note>
+          </ion-item>
+
+          <ion-button
+            size="full"
+            (click)="onClick(form.value)"
+            [disabled]="!form.valid"
+            >Login</ion-button
+          >
+        </ion-card-content>
+      </ion-card>
+    </form>
+  </div>
+</ion-content>

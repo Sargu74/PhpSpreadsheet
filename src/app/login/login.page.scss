@@ -1,0 +1,19 @@
+.flex-center {
+  background-image: url("../../assets/LaborRec-BG-Mobile.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+ion-card {
+  opacity: 90%;
+}
+
+ion-card-title {
+  display: flex;
+  justify-content: center;
+}
+
+ion-button {
+  --color: var(--ion-color-warning-contrast);
+  --background: var(--ion-color-warning);
+}

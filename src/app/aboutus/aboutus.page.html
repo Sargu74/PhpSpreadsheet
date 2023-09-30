@@ -1,0 +1,25 @@
+<ion-toolbar>
+  <ion-avatar slot="start">
+    <img src="../../assets/Employees(64x64).png" />
+  </ion-avatar>
+
+  <ion-label>{{ employeeName }}</ion-label>
+
+  <ion-button (click)="onExit()" fill="clear" slot="end">
+    <ion-icon name="exit" color="light" fill="clear" size="large"></ion-icon>
+  </ion-button>
+</ion-toolbar>
+
+<ion-tabs>
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="home">
+      <ion-icon name="person-add" color="warning"></ion-icon>
+      Novo registo
+    </ion-tab-button>
+
+    <ion-tab-button tab="contact">
+      <ion-icon name="list" color="warning"></ion-icon>
+      Ver registos
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>
